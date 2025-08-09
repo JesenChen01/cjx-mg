@@ -53,7 +53,9 @@ const modules: Record<string, any> = import.meta.glob(
 const routes = [];
 
 Object.keys(modules).forEach(key => {
-  routes.push(modules[key].default);
+  if (modules[key].default) {
+    routes.push(modules[key].default);
+  }
 });
 
 /** 导出处理后的静态路由（三级及以上的路由全部拍成二级） */

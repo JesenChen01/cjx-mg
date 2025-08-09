@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // 模拟后端动态生成路由
 import { defineFakeRoute } from "vite-plugin-fake-server/client";
 import { system, monitor, permission, frame, tabs } from "@/router/enums";
@@ -328,11 +329,11 @@ export default defineFakeRoute([
       return {
         success: true,
         data: [
-          systemManagementRouter,
-          systemMonitorRouter,
-          permissionRouter,
-          frameRouter,
-          tabsRouter
+          // systemManagementRouter,
+          // systemMonitorRouter,
+          // permissionRouter,
+          // frameRouter,
+          // tabsRouter
         ]
       };
     }
