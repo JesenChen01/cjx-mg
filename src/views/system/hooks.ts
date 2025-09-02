@@ -1,6 +1,6 @@
 // 抽离可公用的工具函数等用于系统管理页面逻辑
 import { computed } from "vue";
-import { useDark } from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
 
 export function usePublicHooks() {
   const { isDark } = useDark();

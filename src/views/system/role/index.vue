@@ -8,7 +8,7 @@ import {
   subBefore,
   deviceDetection,
   useResizeObserver
-} from "@pureadmin/utils";
+} from "@/utils/util";
 
 // import Database from "~icons/ri/database-2-line";
 // import More from "~icons/ep/more-filled";

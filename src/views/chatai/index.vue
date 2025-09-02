@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { h } from "vue";
 import { ElEmpty } from "element-plus";
-import { deviceDetection } from "@pureadmin/utils";
+import { deviceDetection } from "@/utils/util";
 import {
   ChatGPT,
   Bard,

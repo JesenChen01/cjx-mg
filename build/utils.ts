@@ -2,7 +2,6 @@ import dayjs from "dayjs";
 import { readdir, stat } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
-import { sum, formatBytes } from "@pureadmin/utils";
 import {
   name,
   version,
@@ -87,7 +86,35 @@ const getPackageSize = options => {
     let count = 0;
     const checkEnd = () => {
       ++count == files.length &&
-        callback(format ? formatBytes(sum(fileListTotal)) : sum(fileListTotal));
+        callback(
+          format
+            ? (() => {
+                const total = fileListTotal.reduce(
+                  (acc, curr) => acc + curr,
+                  0
+                );
+                const units = [
+                  "Bytes",
+                  "KB",
+                  "MB",
+                  "GB",
+                  "TB",
+                  "PB",
+                  "EB",
+                  "ZB",
+                  "YB"
+                ];
+                if (!Number.isFinite(total) || total <= 0)
+                  return `0 ${units[0]}`;
+                const index = Math.min(
+                  units.length - 1,
+                  Math.floor(Math.log(total) / Math.log(1024))
+                );
+                const value = total / Math.pow(1024, index);
+                return `${value.toFixed(2)} ${units[index]}`;
+              })()
+            : fileListTotal.reduce((acc, curr) => acc + curr, 0)
+        );
     };
     files.forEach((item: string) => {
       stat(`${folder}/${item}`, async (err, stats) => {

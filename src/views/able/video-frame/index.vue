@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { emitter } from "@/utils/mitt";
-import { useLoader } from "@pureadmin/utils";
+import { useLoader } from "@/composable/useLoader";
 import { CanvasRenderer } from "./canvasRenderer";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 

@@ -22,7 +22,6 @@ const { columns } = useColumns();
 const words = [
   "@pureadmin/descriptions",
   "@pureadmin/table",
-  "@pureadmin/utils",
   "@vueuse/core",
   "axios",
   "dayjs",

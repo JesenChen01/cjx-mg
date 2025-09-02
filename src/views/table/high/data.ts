@@ -1,6 +1,5 @@
 import dayjs from "dayjs";
-import { clone } from "@pureadmin/utils";
-
+import { cloneDeep } from "lodash-es";
 const date = dayjs(new Date()).format("YYYY-MM-DD");
 
 const tableData = [
@@ -56,7 +55,7 @@ const tableData = [
   }
 ];
 
-const tableDataMore = clone(tableData, true).map(item =>
+const tableDataMore = cloneDeep(tableData).map(item =>
   Object.assign(item, {
     state: "California",
     city: "Los Angeles",
@@ -64,20 +63,20 @@ const tableDataMore = clone(tableData, true).map(item =>
   })
 );
 
-const tableDataImage = clone(tableData, true).map((item, index) =>
+const tableDataImage = cloneDeep(tableData).map((item, index) =>
   Object.assign(item, {
     image: `https://pure-admin.github.io/pure-admin-table/imgs/${index + 1}.jpg`
   })
 );
 
-const tableDataSortable = clone(tableData, true).map((item, index) => {
+const tableDataSortable = cloneDeep(tableData).map((item, index) => {
   delete item.date;
   Object.assign(item, {
     date: `${dayjs(new Date()).format("YYYY-MM")}-${index + 1}`
   });
 });
 
-const tableDataDrag = clone(tableData, true).map((item, index) => {
+const tableDataDrag = cloneDeep(tableData).map((item, index) => {
   delete item.address;
   delete item.date;
   return Object.assign(item, {
@@ -86,7 +85,7 @@ const tableDataDrag = clone(tableData, true).map((item, index) => {
   });
 });
 
-const tableDataEdit = clone(tableData, true).map((item, index) => {
+const tableDataEdit = cloneDeep(tableData).map((item, index) => {
   delete item.date;
   return Object.assign(item, {
     id: index + 1,

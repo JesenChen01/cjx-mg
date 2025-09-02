@@ -1,12 +1,10 @@
 import "./index.css";
 import type { OptionsType } from "./type";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
-import {
-  useDark,
-  isNumber,
-  isFunction,
-  useResizeObserver
-} from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
+import { useResizeObserver } from "@/utils/util";
+import { isNumber, isFunction } from "@/utils/util";
+
 import {
   type PropType,
   h,

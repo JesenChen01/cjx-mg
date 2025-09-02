@@ -1,4 +1,4 @@
-import { isString, isEmpty } from "@pureadmin/utils";
+import { isString, isEmpty } from "@/utils/util";
 import { useMultiTagsStoreHook } from "@/store/modules/multiTags";
 import {
   useRouter,

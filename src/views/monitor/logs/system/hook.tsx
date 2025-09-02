@@ -4,7 +4,8 @@ import { message } from "@/utils/message";
 import { addDialog } from "@/components/ReDialog";
 import type { PaginationProps } from "@pureadmin/table";
 import { type Ref, reactive, ref, onMounted, toRaw } from "vue";
-import { getKeyList, useCopyToClipboard } from "@pureadmin/utils";
+import { useCopyToClipboard } from "@pureadmin/utils";
+import { getKeyList } from "@/utils/util";
 import { getSystemLogsList, getSystemLogsDetail } from "@/api/system";
 import Info from "~icons/ri/question-line";
 

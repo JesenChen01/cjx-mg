@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { initRouter } from "@/router/utils";
-import { storageLocal } from "@pureadmin/utils";
+import { storageLocal } from "@/utils/storageLocal";
 import { type CSSProperties, ref, computed } from "vue";
 import { useUserStoreHook } from "@/store/modules/user";
 import { usePermissionStoreHook } from "@/store/modules/permission";

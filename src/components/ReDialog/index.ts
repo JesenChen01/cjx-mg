@@ -1,7 +1,7 @@
 import { ref } from "vue";
 import reDialog from "./index.vue";
 import { useTimeoutFn } from "@vueuse/core";
-import { withInstall } from "@pureadmin/utils";
+import { withInstall } from "@/utils/util";
 import type {
   EventType,
   ArgsType,

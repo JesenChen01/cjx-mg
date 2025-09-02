@@ -1,4 +1,4 @@
-import { withInstall } from "@pureadmin/utils";
+import { withInstall } from "@/utils/util";
 import reBarcode from "./src/index.vue";
 
 /** 条形码组件 */

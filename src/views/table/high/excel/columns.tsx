@@ -1,11 +1,11 @@
 import { ref } from "vue";
 import { utils, writeFile } from "xlsx";
 import { tableDataDrag } from "../data";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 import { message } from "@/utils/message";
 
 export function useColumns() {
-  const dataList = ref(clone(tableDataDrag, true));
+  const dataList = ref(cloneDeep(tableDataDrag));
 
   const columns: TableColumnList = [
     {

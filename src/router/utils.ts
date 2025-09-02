@@ -8,14 +8,15 @@ import {
 import { router } from "./index";
 import { isProxy, toRaw } from "vue";
 import { useTimeoutFn } from "@vueuse/core";
+import { storageLocal } from "@/utils/storageLocal";
+import { cloneDeep } from "lodash-es";
 import {
   isString,
-  cloneDeep,
   isAllEmpty,
   intersection,
-  storageLocal,
   isIncludeAllChildren
-} from "@pureadmin/utils";
+} from "@/utils/util";
+
 import { getConfig } from "@/config";
 import { buildHierarchyTree } from "@/utils/tree";
 import { userKey, type DataInfo } from "@/utils/auth";

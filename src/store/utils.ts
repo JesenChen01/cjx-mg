@@ -8,16 +8,11 @@ export {
   filterNoPermissionTree,
   formatFlatteningRoutes
 } from "@/router/utils";
-export {
-  isUrl,
-  isEqual,
-  isNumber,
-  debounce,
-  isBoolean,
-  getKeyList,
-  storageLocal,
-  deviceDetection
-} from "@pureadmin/utils";
+export { isUrl, isNumber, getKeyList, deviceDetection } from "@/utils/util";
+
+export { isEqual, debounce, isBoolean } from "lodash-es";
+
+export { storageLocal } from "@/utils/storageLocal";
 export type {
   setType,
   appType,

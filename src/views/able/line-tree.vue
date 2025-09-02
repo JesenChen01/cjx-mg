@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 import { transformI18n } from "@/plugins/i18n";
 import ElTreeLine from "@/components/ReTreeLine";
 import { extractPathList, deleteChildren } from "@/utils/tree";
@@ -10,7 +10,7 @@ defineOptions({
   name: "LineTree"
 });
 
-const menusTree = clone(usePermissionStoreHook().wholeMenus, true);
+const menusTree = cloneDeep(usePermissionStoreHook().wholeMenus);
 const menusData = computed(() => {
   return deleteChildren(menusTree);
 });

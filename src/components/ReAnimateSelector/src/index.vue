@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { animates } from "./animate";
-import { cloneDeep } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 
 defineOptions({
   name: "ReAnimateSelector"

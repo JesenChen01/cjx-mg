@@ -7,7 +7,8 @@ import { usePublicHooks } from "../../hooks";
 import { addDialog } from "@/components/ReDialog";
 import { reactive, ref, onMounted, h } from "vue";
 import type { FormItemProps } from "../utils/types";
-import { cloneDeep, isAllEmpty, deviceDetection } from "@pureadmin/utils";
+import { isAllEmpty, deviceDetection } from "@/utils/util";
+import { cloneDeep } from "lodash-es";
 
 export function useDept() {
   const form = reactive({

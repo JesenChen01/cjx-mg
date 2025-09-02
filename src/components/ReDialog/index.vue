@@ -7,7 +7,7 @@ import {
   dialogStore
 } from "./index";
 import { ref, computed } from "vue";
-import { isFunction } from "@pureadmin/utils";
+import { isFunction } from "@/utils/util";
 import Fullscreen from "~icons/ri/fullscreen-fill";
 import ExitFullscreen from "~icons/ri/fullscreen-exit-fill";
 

@@ -1,5 +1,6 @@
 import "./index.scss";
-import { isObject } from "@pureadmin/utils";
+import { isObject } from "@/utils/util";
+
 import type { Directive, DirectiveBinding } from "vue";
 
 export interface RippleOptions {

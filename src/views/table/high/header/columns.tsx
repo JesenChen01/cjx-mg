@@ -1,6 +1,6 @@
 import { tableData } from "../data";
 import { ref, onMounted } from "vue";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 
 export function useColumns() {
   const dataList = ref([]);
@@ -38,7 +38,7 @@ export function useColumns() {
   }
 
   onMounted(() => {
-    clone(tableData, true).forEach((item, index) => {
+    cloneDeep(tableData).forEach((item, index) => {
       dataList.value.push({ id: index, ...item });
     });
   });

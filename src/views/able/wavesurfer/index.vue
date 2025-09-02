@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import WaveSurfer from "wavesurfer.js";
-import { getTime } from "@pureadmin/utils";
+import { getTime } from "@/utils/util";
 import { Play, Pause, Forward, Rewind } from "./svg";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 

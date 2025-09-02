@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { deviceDetection } from "@pureadmin/utils";
+import { deviceDetection } from "@/utils/util";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import VideoPlay from "~icons/ep/video-play";
 

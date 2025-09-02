@@ -1,11 +1,11 @@
 import Sortable from "sortablejs";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 import { tableDataDrag } from "../../data";
 import { ref, nextTick, onMounted } from "vue";
 
 // 列拖拽演示
 export function useColumns() {
-  const dataList = ref(clone(tableDataDrag, true));
+  const dataList = ref(cloneDeep(tableDataDrag));
 
   const columnsDrag = ref<TableColumnList>([
     {

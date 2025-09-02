@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
-import { cloneDeep, isAllEmpty } from "@pureadmin/utils";
+import { isAllEmpty } from "@/utils/util";
+import { cloneDeep } from "lodash";
 
 defineOptions({
   name: "PureTag"

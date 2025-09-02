@@ -4,7 +4,7 @@ import {
   downloadByBase64,
   downloadByData,
   downloadByUrl
-} from "@pureadmin/utils";
+} from "@/utils/util";
 import axios from "axios";
 
 defineOptions({

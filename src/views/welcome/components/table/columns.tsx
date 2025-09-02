@@ -1,5 +1,5 @@
 import { tableData } from "../../data";
-import { delay } from "@pureadmin/utils";
+import { delay } from "@/utils/util";
 import { ref, onMounted, reactive } from "vue";
 import type { PaginationProps } from "@pureadmin/table";
 import ThumbUp from "~icons/ri/thumb-up-line";

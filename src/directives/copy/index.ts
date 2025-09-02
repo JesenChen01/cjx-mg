@@ -1,6 +1,6 @@
 import { message } from "@/utils/message";
 import { useEventListener } from "@vueuse/core";
-import { copyTextToClipboard } from "@pureadmin/utils";
+import { copyTextToClipboard } from "@/utils/util";
 import type { Directive, DirectiveBinding } from "vue";
 
 export interface CopyEl extends HTMLElement {

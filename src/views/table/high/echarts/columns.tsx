@@ -2,10 +2,12 @@ import { ref, computed } from "vue";
 import { tableDataDrag } from "../data";
 import { message } from "@/utils/message";
 import { templateRef } from "@vueuse/core";
-import { clone, useDark, useECharts } from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
+import { useECharts } from "@/composable/useECharts";
+import { cloneDeep } from "lodash-es";
 
 export function useColumns() {
-  const dataList = ref(clone(tableDataDrag, true).splice(0, 4));
+  const dataList = ref(cloneDeep(tableDataDrag).splice(0, 4));
 
   const columns: TableColumnList = [
     {

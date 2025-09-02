@@ -6,7 +6,7 @@ import {
 } from "@/utils/tree";
 import { useDetail } from "./hooks";
 import { ref, computed } from "vue";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 import { transformI18n } from "@/plugins/i18n";
 import { useMultiTagsStoreHook } from "@/store/modules/multiTags";
 import { usePermissionStoreHook } from "@/store/modules/permission";
@@ -16,7 +16,7 @@ defineOptions({
 });
 
 const { toDetail, router } = useDetail();
-const menusTree = clone(usePermissionStoreHook().wholeMenus, true);
+const menusTree = cloneDeep(usePermissionStoreHook().wholeMenus);
 
 const treeData = computed(() => {
   return appendFieldByUniqueId(deleteChildren(menusTree), 0, {

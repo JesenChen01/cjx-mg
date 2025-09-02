@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Props } from "../types";
 import { transformI18n } from "@/plugins/i18n";
-import { useResizeObserver } from "@pureadmin/utils";
+import { useResizeObserver } from "@/utils/util";
 import { useEpThemeStoreHook } from "@/store/modules/epTheme";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import { ref, computed, getCurrentInstance, onMounted } from "vue";

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { message } from "@/utils/message";
-import { deviceDetection } from "@pureadmin/utils";
+import { deviceDetection } from "@/utils/util";
 
 defineOptions({
   name: "Preferences"

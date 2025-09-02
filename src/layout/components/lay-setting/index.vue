@@ -17,7 +17,10 @@ import { useAppStoreHook } from "@/store/modules/app";
 import { useMultiTagsStoreHook } from "@/store/modules/multiTags";
 import Segmented, { type OptionsType } from "@/components/ReSegmented";
 import { useDataThemeChange } from "@/layout/hooks/useDataThemeChange";
-import { useDark, useGlobal, debounce, isNumber } from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
+import { useGlobal } from "@/composable/useGlobal";
+import { isNumber } from "@/utils/util";
+import { debounce } from "lodash";
 
 import Check from "~icons/ep/check";
 import LeftArrow from "~icons/ri/arrow-left-s-line?width=20&height=20";
@@ -258,18 +261,18 @@ watch($storage, ({ layout }) => {
   switch (layout["layout"]) {
     case "vertical":
       toggleClass(true, "is-select", unref(verticalRef));
-      debounce(setFalse([horizontalRef]), 50);
-      debounce(setFalse([mixRef]), 50);
+      debounce(() => setFalse([horizontalRef]), 50);
+      debounce(() => setFalse([mixRef]), 50);
       break;
     case "horizontal":
       toggleClass(true, "is-select", unref(horizontalRef));
-      debounce(setFalse([verticalRef]), 50);
-      debounce(setFalse([mixRef]), 50);
+      debounce(() => setFalse([verticalRef]), 50);
+      debounce(() => setFalse([mixRef]), 50);
       break;
     case "mix":
       toggleClass(true, "is-select", unref(mixRef));
-      debounce(setFalse([verticalRef]), 50);
-      debounce(setFalse([horizontalRef]), 50);
+      debounce(() => setFalse([verticalRef]), 50);
+      debounce(() => setFalse([horizontalRef]), 50);
       break;
   }
 });

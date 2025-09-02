@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import "vditor/dist/index.css";
 import Vditor from "vditor";
-import { useDark } from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
 import { useIntervalFn } from "@vueuse/core";
 import { onMounted, ref, watch, toRaw, onUnmounted } from "vue";
 

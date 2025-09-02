@@ -1,5 +1,6 @@
 import { tableData } from "../data";
-import { clone, delay } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
+import { delay } from "@/utils/util";
 import { ref, onMounted, reactive, watchEffect } from "vue";
 import type { PaginationProps, LoadingConfig, Align } from "@pureadmin/table";
 
@@ -87,7 +88,7 @@ export function useColumns() {
     delay(600).then(() => {
       const newList = [];
       Array.from({ length: 6 }).forEach(() => {
-        newList.push(clone(tableData, true));
+        newList.push(cloneDeep(tableData));
       });
       newList.flat(Infinity).forEach((item, index) => {
         dataList.value.push({ id: index, ...item });

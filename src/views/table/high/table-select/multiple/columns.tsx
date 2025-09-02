@@ -1,7 +1,8 @@
 import { message } from "@/utils/message";
 import { tableDataEdit } from "../../data";
 import type { PaginationProps } from "@pureadmin/table";
-import { cloneDeep, isAllEmpty } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
+import { isAllEmpty } from "@/utils/util";
 import { type Ref, ref, reactive, watch, nextTick } from "vue";
 
 export function useColumns(selectRef: Ref, formRef: Ref, tableRef: Ref) {

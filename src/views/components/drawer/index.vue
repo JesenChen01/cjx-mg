@@ -5,7 +5,7 @@ import {
   closeAllDrawer,
   updateDrawer
 } from "@/components/ReDrawer/index";
-import { cloneDeep, debounce } from "@pureadmin/utils";
+import { cloneDeep, debounce } from "lodash";
 import { message } from "@/utils/message";
 import { createVNode, h, ref } from "vue";
 import formPrimitive from "./formPrimitive.vue";

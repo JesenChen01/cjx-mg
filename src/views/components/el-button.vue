@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import { useDark } from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 
 defineOptions({

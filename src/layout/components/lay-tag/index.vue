@@ -11,12 +11,8 @@ import { useSettingStoreHook } from "@/store/modules/settings";
 import { useMultiTagsStoreHook } from "@/store/modules/multiTags";
 import { usePermissionStoreHook } from "@/store/modules/permission";
 import { ref, watch, unref, toRaw, nextTick, onBeforeUnmount } from "vue";
-import {
-  delay,
-  isEqual,
-  isAllEmpty,
-  useResizeObserver
-} from "@pureadmin/utils";
+import { delay, isAllEmpty, useResizeObserver } from "@/utils/util";
+import { isEqual } from "lodash-es";
 
 import ExitFullscreen from "~icons/ri/fullscreen-exit-fill";
 import Fullscreen from "~icons/ri/fullscreen-fill";

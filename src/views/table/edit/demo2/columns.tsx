@@ -1,10 +1,11 @@
 import { ref } from "vue";
 import { tableData, options } from "../data";
-import { clone, delObjectProperty } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
+import { delObjectProperty } from "@/utils/util";
 
 export function useColumns() {
   const editMap = ref({});
-  const dataList = ref(clone(tableData, true));
+  const dataList = ref(cloneDeep(tableData));
 
   const columns: TableColumnList = [
     {

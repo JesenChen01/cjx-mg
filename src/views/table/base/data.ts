@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 
 const date = dayjs(new Date()).format("YYYY-MM-DD");
 
@@ -46,7 +46,7 @@ const tableData = [
   }
 ];
 
-const cloneData = clone(tableData, true);
+const cloneData = cloneDeep(tableData);
 
 const tableDataMore = cloneData.map(item =>
   Object.assign(item, {

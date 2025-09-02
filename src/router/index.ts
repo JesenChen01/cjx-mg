@@ -7,13 +7,10 @@ import { buildHierarchyTree } from "@/utils/tree";
 import remainingRouter from "./modules/remaining";
 import { useMultiTagsStoreHook } from "@/store/modules/multiTags";
 import { usePermissionStoreHook } from "@/store/modules/permission";
-import {
-  isUrl,
-  openLink,
-  cloneDeep,
-  isAllEmpty,
-  storageLocal
-} from "@pureadmin/utils";
+import { storageLocal } from "@/utils/storageLocal";
+import { openLink } from "@/utils/util";
+import { isUrl, isAllEmpty } from "@/utils/util";
+import { cloneDeep } from "lodash-es";
 import {
   ascending,
   getTopMenu,

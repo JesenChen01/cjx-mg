@@ -14,13 +14,9 @@ import {
   onUnmounted,
   defineComponent
 } from "vue";
-import {
-  delay,
-  debounce,
-  isArray,
-  downloadByBase64,
-  useResizeObserver
-} from "@pureadmin/utils";
+import { downloadByBase64 } from "@/utils/util";
+import { delay, useResizeObserver } from "@/utils/util";
+import { debounce } from "lodash-es";
 import {
   Reload,
   Upload,
@@ -227,7 +223,7 @@ export default defineComponent({
       if (event === "scaleY") {
         scaleY = arg = scaleY === -1 ? 1 : -1;
       }
-      arg && isArray(arg)
+      arg && Array.isArray(arg)
         ? cropper.value?.[event]?.(...arg)
         : cropper.value?.[event]?.(arg);
     }

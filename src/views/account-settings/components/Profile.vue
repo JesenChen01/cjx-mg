@@ -5,7 +5,9 @@ import { message } from "@/utils/message";
 import { type UserInfo, getMine } from "@/api/user";
 import type { FormInstance, FormRules } from "element-plus";
 import ReCropperPreview from "@/components/ReCropperPreview";
-import { createFormData, deviceDetection } from "@pureadmin/utils";
+import { createFormData } from "@/utils/util";
+import { deviceDetection } from "@/utils/util";
+
 import uploadLine from "~icons/ri/upload-line";
 
 defineOptions({

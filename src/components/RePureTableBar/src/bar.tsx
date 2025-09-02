@@ -10,13 +10,8 @@ import {
   defineComponent,
   getCurrentInstance
 } from "vue";
-import {
-  delay,
-  cloneDeep,
-  isBoolean,
-  isFunction,
-  getKeyList
-} from "@pureadmin/utils";
+import { delay, isFunction, getKeyList } from "@/utils/util";
+import { cloneDeep, isBoolean } from "lodash-es";
 
 import Fullscreen from "~icons/ri/fullscreen-fill";
 import ExitFullscreen from "~icons/ri/fullscreen-exit-fill";

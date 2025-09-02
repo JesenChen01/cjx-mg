@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isEqual } from "@pureadmin/utils";
+import { isEqual } from "lodash-es";
 import { transformI18n } from "@/plugins/i18n";
 import { useRoute, useRouter } from "vue-router";
 import { ref, watch, onMounted, toRaw } from "vue";

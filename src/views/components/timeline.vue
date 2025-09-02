@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { markRaw } from "vue";
-import { randomGradient } from "@pureadmin/utils";
+import { randomGradient } from "@/utils/util";
 import { useRenderFlicker } from "@/components/ReFlicker";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import Iphone from "~icons/ep/iphone";

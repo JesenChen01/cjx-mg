@@ -2,7 +2,7 @@
 import { reactive, ref } from "vue";
 import { formUpload } from "@/api/mock";
 import { message } from "@/utils/message";
-import { createFormData } from "@pureadmin/utils";
+import { createFormData } from "@/utils/util";
 
 import UploadIcon from "~icons/ri/upload-2-line?width=26&height=26";
 

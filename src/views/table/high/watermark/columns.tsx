@@ -1,9 +1,11 @@
 import { tableDataEdit } from "../data";
 import { ref, onMounted, type Ref } from "vue";
-import { clone, useWatermark, delay } from "@pureadmin/utils";
+import { useWatermark } from "@/composable/useWatermark";
+import { delay } from "@/utils/util";
+import { cloneDeep } from "lodash-es";
 
 export function useColumns(waterRef: Ref) {
-  const dataList = ref(clone(tableDataEdit, true));
+  const dataList = ref(cloneDeep(tableDataEdit));
 
   const columns: TableColumnList = [
     {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import { message } from "@/utils/message";
-import { getKeyList } from "@pureadmin/utils";
+import { getKeyList } from "@/utils/util";
 
 defineOptions({
   name: "CheckButton"

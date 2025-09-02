@@ -1,4 +1,4 @@
-import { withInstall } from "@pureadmin/utils";
+import { withInstall } from "@/utils/util";
 import reAnimateSelector from "./src/index.vue";
 
 /** [animate.css](https://animate.style/) 选择器组件 */

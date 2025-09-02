@@ -9,7 +9,9 @@ import {
 } from "vue";
 import "./index.scss";
 import propTypes from "@/utils/propTypes";
-import { isString, cloneDeep } from "@pureadmin/utils";
+import { isString } from "@/utils/util";
+import { cloneDeep } from "lodash-es";
+
 import QRCode, { type QRCodeRenderersOptions } from "qrcode";
 import RefreshRight from "~icons/ep/refresh-right";
 

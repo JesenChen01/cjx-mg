@@ -11,12 +11,8 @@ import { addDialog } from "@/components/ReDialog";
 import type { PaginationProps } from "@pureadmin/table";
 import ReCropperPreview from "@/components/ReCropperPreview";
 import type { FormItemProps, RoleFormItemProps } from "../utils/types";
-import {
-  getKeyList,
-  isAllEmpty,
-  hideTextAtIndex,
-  deviceDetection
-} from "@pureadmin/utils";
+import { getKeyList, hideTextAtIndex, deviceDetection } from "@/utils/util";
+import { isAllEmpty } from "@/utils/util";
 import {
   getRoleIds,
   getDeptList,

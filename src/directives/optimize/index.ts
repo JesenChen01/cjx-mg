@@ -1,10 +1,4 @@
-import {
-  isArray,
-  throttle,
-  debounce,
-  isObject,
-  isFunction
-} from "@pureadmin/utils";
+import { isArray, isObject, isFunction, throttle, debounce } from "lodash-es";
 import { useEventListener } from "@vueuse/core";
 import type { Directive, DirectiveBinding } from "vue";
 

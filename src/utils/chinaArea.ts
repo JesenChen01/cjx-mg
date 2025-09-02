@@ -1,5 +1,5 @@
 import REGION_DATA from "china-area-data";
-import { cloneDeep } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 
 interface ProvinceData {
   value: string;

@@ -7,7 +7,7 @@ import {
   defineComponent,
   getCurrentInstance
 } from "vue";
-import { addClass, removeClass, toggleClass } from "@pureadmin/utils";
+import { addClass, removeClass, toggleClass } from "@/utils/util";
 
 const stayClass = "stay"; //鼠标点击
 const activeClass = "hs-on"; //鼠标移动上去

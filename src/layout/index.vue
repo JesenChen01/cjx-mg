@@ -17,12 +17,10 @@ import {
   onBeforeMount,
   defineComponent
 } from "vue";
-import {
-  useDark,
-  useGlobal,
-  deviceDetection,
-  useResizeObserver
-} from "@pureadmin/utils";
+import { useGlobal } from "@/composable/useGlobal";
+import { useDark } from "@/composable/useDark";
+import { deviceDetection } from "@/utils/util";
+import { useResizeObserver } from "@/composable/useResizeObserver";
 
 import LayTag from "./components/lay-tag/index.vue";
 import LayNavbar from "./components/lay-navbar/index.vue";

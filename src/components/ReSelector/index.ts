@@ -1,5 +1,5 @@
 import reSelector from "./src";
-import { withInstall } from "@pureadmin/utils";
+import { withInstall } from "@/utils/util";
 
 /** 选择器组件 */
 export const ReSelector = withInstall(reSelector);

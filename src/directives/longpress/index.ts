@@ -1,6 +1,7 @@
 import { useEventListener } from "@vueuse/core";
 import type { Directive, DirectiveBinding } from "vue";
-import { subBefore, subAfter, isFunction } from "@pureadmin/utils";
+import { subBefore, subAfter } from "@/utils/util";
+import { isFunction } from "lodash-es";
 
 export const longpress: Directive = {
   mounted(el: HTMLElement, binding: DirectiveBinding<Function>) {

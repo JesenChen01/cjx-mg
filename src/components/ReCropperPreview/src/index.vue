@@ -1,7 +1,7 @@
 <script setup lang="tsx">
 import { ref } from "vue";
 import ReCropper from "@/components/ReCropper";
-import { formatBytes } from "@pureadmin/utils";
+import { formatBytes } from "@/utils/util";
 
 defineOptions({
   name: "ReCropperPreview"

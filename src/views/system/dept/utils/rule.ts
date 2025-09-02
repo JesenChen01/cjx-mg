@@ -1,6 +1,6 @@
 import { reactive } from "vue";
 import type { FormRules } from "element-plus";
-import { isPhone, isEmail } from "@pureadmin/utils";
+import { isPhone, isEmail } from "@/utils/util";
 
 /** 自定义表单规则校验 */
 export const formRules = reactive(<FormRules>{

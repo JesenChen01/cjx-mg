@@ -1,11 +1,11 @@
 import { ref } from "vue";
 import { tableDataDrag } from "../data";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 import { message } from "@/utils/message";
 import { CustomMouseMenu } from "@howdyjs/mouse-menu";
 
 export function useColumns() {
-  const dataList = ref(clone(tableDataDrag, true));
+  const dataList = ref(cloneDeep(tableDataDrag));
 
   const columns: TableColumnList = [
     {

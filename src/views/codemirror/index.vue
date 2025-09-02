@@ -5,7 +5,7 @@ import "codemirror/addon/hint/show-hint";
 import "codemirror/addon/hint/javascript-hint.js";
 import "codemirror/mode/javascript/javascript.js";
 
-import { useDark } from "@pureadmin/utils";
+import { useDark } from "@/composable/useDark";
 import Codemirror from "codemirror-editor-vue3";
 import { ref, reactive, watch, nextTick } from "vue";
 import type { Editor, EditorConfiguration } from "codemirror";

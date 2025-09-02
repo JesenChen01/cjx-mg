@@ -12,7 +12,10 @@ import type { optionsItem, dragItem } from "../types";
 import { ref, computed, shallowRef, watch } from "vue";
 import { useDebounceFn, onKeyStroke } from "@vueuse/core";
 import { usePermissionStoreHook } from "@/store/modules/permission";
-import { cloneDeep, isAllEmpty, storageLocal } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
+import { storageLocal } from "@/utils/storageLocal";
+import { isAllEmpty } from "@/utils/util";
+
 import SearchIcon from "~icons/ri/search-line";
 
 interface Props {

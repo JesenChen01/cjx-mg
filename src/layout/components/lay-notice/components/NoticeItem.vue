@@ -2,7 +2,7 @@
 import { ListItem } from "../data";
 import { ref, PropType, nextTick } from "vue";
 import { useNav } from "@/layout/hooks/useNav";
-import { deviceDetection } from "@pureadmin/utils";
+import { deviceDetection } from "@/utils/util";
 
 defineProps({
   noticeItem: {

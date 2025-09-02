@@ -1,10 +1,10 @@
 import Print from "@/utils/print";
 import { ref, type Ref } from "vue";
 import { tableDataEdit } from "../data";
-import { clone } from "@pureadmin/utils";
+import { cloneDeep } from "lodash-es";
 
 export function useColumns(printRef: Ref) {
-  const dataList = ref(clone(tableDataEdit, true));
+  const dataList = ref(cloneDeep(tableDataEdit));
 
   const columns: TableColumnList = [
     {

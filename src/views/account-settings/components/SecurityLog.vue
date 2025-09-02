@@ -2,7 +2,8 @@
 import dayjs from "dayjs";
 import { getMineLogs } from "@/api/user";
 import { reactive, ref, onMounted } from "vue";
-import { deviceDetection } from "@pureadmin/utils";
+import { deviceDetection } from "@/utils/util";
+
 import type { PaginationProps } from "@pureadmin/table";
 
 defineOptions({

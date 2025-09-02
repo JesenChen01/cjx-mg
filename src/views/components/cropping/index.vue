@@ -2,7 +2,7 @@
 import avatar from "./avatar.png";
 import { ref, onBeforeUnmount } from "vue";
 import ReCropper from "@/components/ReCropper";
-import { formatBytes } from "@pureadmin/utils";
+import { formatBytes } from "@/utils/util";
 
 defineOptions({
   name: "Cropping"

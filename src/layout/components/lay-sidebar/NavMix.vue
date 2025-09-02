@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isAllEmpty } from "@pureadmin/utils";
+import { isAllEmpty } from "@/utils/util";
 import { useNav } from "@/layout/hooks/useNav";
 import { transformI18n } from "@/plugins/i18n";
 import LaySearch from "../lay-search/index.vue";

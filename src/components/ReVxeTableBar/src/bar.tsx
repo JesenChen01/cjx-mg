@@ -1,7 +1,9 @@
 import Sortable from "sortablejs";
 import { transformI18n } from "@/plugins/i18n";
 import { useEpThemeStoreHook } from "@/store/modules/epTheme";
-import { delay, cloneDeep, getKeyList } from "@pureadmin/utils";
+import { delay, getKeyList } from "@/utils/util";
+import { cloneDeep } from "lodash-es";
+
 import {
   type PropType,
   ref,

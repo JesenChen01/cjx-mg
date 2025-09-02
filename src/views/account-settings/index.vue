@@ -6,7 +6,9 @@ import { ReText } from "@/components/ReText";
 import Profile from "./components/Profile.vue";
 import Preferences from "./components/Preferences.vue";
 import SecurityLog from "./components/SecurityLog.vue";
-import { useGlobal, deviceDetection } from "@pureadmin/utils";
+import { useGlobal } from "@/composable/useGlobal";
+import { deviceDetection } from "@/utils/util";
+
 import AccountManagement from "./components/AccountManagement.vue";
 import { useDataThemeChange } from "@/layout/hooks/useDataThemeChange";
 import LaySidebarTopCollapse from "@/layout/components/lay-sidebar/components/SidebarTopCollapse.vue";

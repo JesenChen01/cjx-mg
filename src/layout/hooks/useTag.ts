@@ -13,13 +13,9 @@ import { transformI18n, $t } from "@/plugins/i18n";
 import { responsiveStorageNameSpace } from "@/config";
 import { useSettingStoreHook } from "@/store/modules/settings";
 import { useMultiTagsStoreHook } from "@/store/modules/multiTags";
-import {
-  isEqual,
-  isBoolean,
-  storageLocal,
-  toggleClass,
-  hasClass
-} from "@pureadmin/utils";
+import { storageLocal } from "@/utils/storageLocal";
+import { toggleClass, hasClass } from "@/utils/util";
+import { isEqual, isBoolean } from "lodash-es";
 
 import Fullscreen from "~icons/ri/fullscreen-fill";
 import CloseAllTags from "~icons/ri/subtract-line";
