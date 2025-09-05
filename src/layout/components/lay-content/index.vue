@@ -15,7 +15,7 @@ const props = defineProps({
 
 const { t } = useI18n();
 const { showModel } = useTags();
-const { $storage, $config } = useGlobal<GlobalPropertiesApi>();
+const { $storage, $config } = useGlobal();
 
 const isKeepAlive = computed(() => {
   return $config?.KeepAlive;

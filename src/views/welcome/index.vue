@@ -5,9 +5,8 @@ import { useDark, randomGradient } from "./utils";
 import WelcomeTable from "./components/table/index.vue";
 import { ReNormalCountTo } from "@/components/ReCountTo";
 import { useRenderFlicker } from "@/components/ReFlicker";
-import { ChartBar, ChartLine, ChartRound } from "./components/charts";
 import Segmented, { type OptionsType } from "@/components/ReSegmented";
-import { chartData, barChartData, progressData, latestNewsData } from "./data";
+import { chartData, progressData, latestNewsData } from "./data";
 
 defineOptions({
   name: "Welcome"
@@ -79,13 +78,6 @@ const optionsBasis: Array<OptionsType> = [
               />
               <p class="font-medium text-green-500">{{ item.percent }}</p>
             </div>
-            <ChartLine
-              v-if="item.data.length > 1"
-              class="w-1/2!"
-              :color="item.color"
-              :data="item.data"
-            />
-            <ChartRound v-else class="w-1/2!" />
           </div>
         </el-card>
       </re-col>
@@ -112,12 +104,7 @@ const optionsBasis: Array<OptionsType> = [
             <span class="text-md font-medium">分析概览</span>
             <Segmented v-model="curWeek" :options="optionsBasis" />
           </div>
-          <div class="flex justify-between items-start mt-3">
-            <ChartBar
-              :requireData="barChartData[curWeek].requireData"
-              :questionData="barChartData[curWeek].questionData"
-            />
-          </div>
+          <div class="flex justify-between items-start mt-3" />
         </el-card>
       </re-col>
 
