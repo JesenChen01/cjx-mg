@@ -10,9 +10,6 @@ import { useVxeTable } from "@/plugins/vxeTable";
 import { useElementPlus } from "@/plugins/elementPlus";
 import { injectResponsiveStorage } from "@/utils/responsive";
 
-import Table from "@pureadmin/table";
-import PureDescriptions from "@pureadmin/descriptions";
-
 // 引入重置样式
 import "./style/reset.scss";
 // 导入公共样式
@@ -63,9 +60,7 @@ getPlatformConfig(app).then(async config => {
     .use(MotionPlugin)
     .use(useI18n)
     .use(useElementPlus)
-    .use(Table)
     .use(useVxeTable)
-    .use(PureDescriptions)
     .use(useEcharts);
   app.mount("#app");
 });
