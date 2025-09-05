@@ -2,7 +2,6 @@
 import { ref, markRaw } from "vue";
 import ReCol from "@/components/ReCol";
 import { useDark, randomGradient } from "./utils";
-import WelcomeTable from "./components/table/index.vue";
 import { ReNormalCountTo } from "@/components/ReCountTo";
 import { useRenderFlicker } from "@/components/ReFlicker";
 import Segmented, { type OptionsType } from "@/components/ReSegmented";
@@ -176,7 +175,6 @@ const optionsBasis: Array<OptionsType> = [
           <div class="flex justify-between">
             <span class="text-md font-medium">数据统计</span>
           </div>
-          <WelcomeTable class="mt-3" />
         </el-card>
       </re-col>
 
@@ -211,9 +209,7 @@ const optionsBasis: Array<OptionsType> = [
                 :icon="
                   markRaw(
                     useRenderFlicker({
-                      background: randomGradient({
-                        randomizeHue: true
-                      })
+                      background: randomGradient()
                     })
                   )
                 "
